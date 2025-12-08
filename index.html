@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="GColumns">
+      <div class="Bchild center-content">
+        <img
+          src="Images/doll2.png"
+          class="clickable contain-imagev2"
+          onclick="showModal3()"
+        />
+      </div>
+      <div class="Lchild center-content2">
+        <img
+          src="Images/gnome2.png"
+          class="clickable contain-imagev3"
+          onclick="showModal4()"
+        />
+      </div>
+    </div>
+    <div class="BColumns center-content2">
+      <img
+        src="Images/key1.png"
+        class="clickable contain-image"
+        onclick="showModal5()"
+      />
+    </div>
+    <div class="GColumns">
+      <div class="Bchild">
+        <img
+          src="Images/birdcage22.png"
+          class="clickable contain-imagev3"
+          onclick="showModal2()"
+        />
+      </div>
+      <div class="Lchild center-content2">
+        <img src="Images/mail.png" class="clickable" onclick="showModal1()" />
+      </div>
+    </div>
+  </body>
+
+  <!-- MY MODAL #1 MAIL  -->
+  <div class="modal center-content" id="myModal">
+    <span class="close" onclick="hideModal()">&times;</span>
+    <img src="Images/firstnote.png" class="hat-pop" />
+  </div>
+
+  <!-- MY MODAL #2  -->
+  <div class="modal center-content" id="myModal2">
+    <span class="close" onclick="hideModal()">&times;</span>
+    <img src="Images/birdnote1.png" class="hat-pop" />
+  </div>
+
+  <!-- MY MODAL #3  -->
+  <div class="modal note-modal" id="myModal3">
+    <span class="close" onclick="hideModal()">&times;</span>
+    <img src="Images/dollnote.png" class="hat-pop" />
+  </div>
+
+  <!-- MY MODAL #4  -->
+  <div class="modal note-modal" id="myModal4">
+    <span class="close" onclick="hideModal()">&times;</span>
+    <img src="Images/gnomehat.png" class="hat-pop" />
+  </div>
+
+  <!-- MY MODAL #5  -->
+  <div class="modal center-content" id="myModal5">
+    <span class="close" onclick="hideModal()">&times;</span>
+    <div class="modal-body center-content">
+      <div class="modalbox">
+        <div class="modalboxcolumns center-content">
+          <img
+            src="Images/zero1.png"
+            class="clickable"
+            id="one"
+            onclick="firstnumber()"
+          />
+          <!-- HINT TEXT -->
+          <p id="decimalHint" class="hint-text">
+            HMMMM... MAYBE THE DECIMAL POINT CHANGES THE VALUE?
+          </p>
+        </div>
+        <div class="modalboxcolumns center-content">
+          <img
+            src="Images/zero1.png"
+            class="clickable"
+            id="two"
+            onclick="secondnumber()"
+          />
+        </div>
+        <div class="modalboxcolumns center-content">
+          <img
+            src="Images/zero1.png"
+            class="clickable"
+            id="three"
+            onclick="thirdnumber()"
+          />
+        </div>
+        <div class="modalboxcolumns center-content">
+          <img
+            src="Images/zero1.png"
+            class="clickable"
+            id="four"
+            onclick="fourthnumber()"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio src="Audio/code.mp3" id="code"></audio>
+  <audio src="Audio/gnome.mp3" id="nomb"></audio>
+  <audio src="Audio/doll.mp3" id="doll"></audio>
+  <audio src="Audio/bird.mp3" id="bird"></audio>
+  <audio src="Audio/paper.mp3" id="paper"></audio>
+  <audio src="Audio/beep2.mp3" id="beep1"></audio>
+  <audio src="Audio/unlock.mp3" id="unlock"></audio>
+  <audio src="Audio/fightback.mp3" id="fight"></audio>
+  <audio id="bgMusic" src="Audio/background.mp3" loop></audio>
+  <script src="script.js"></script>
+  <div id="blackout" aria-hidden="true"></div>
+</html>

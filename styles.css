@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+/* the 100vh and 100vw set the size of the body to fill the viewport (screen) */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  margin: 0;
+  background-image: url("Images/househ.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  overflow: hidden;
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.GColumns {
+  height: 100%;
+  width: 30%;
+  display: block;
+}
+
+.BColumns {
+  height: 100%;
+  width: 40%;
+}
+
+.Lchild {
+  height: 33%;
+  width: 100%;
+}
+.Bchild {
+  height: 67%;
+  width: 100%;
+}
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+}
+.center-content2 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+img {
+  max-height: 95%;
+  max-width: 95%;
+}
+.clickable {
+  filter: brightness(85%) drop-shadow(2px 8px 3px);
+}
+
+/* suggest the element is clickable */
+.clickable:hover {
+  cursor: pointer;
+  filter: brightness(150%) drop-shadow(2px 8px 3px);
+}
+
+/* add satisfaction to click */
+.clickable:active {
+  filter: drop-shadow(0px 0px 3px);
+  transform: scale(0.98);
+}
+
+/* Don't cover the entire screen */
+.modal-body {
+  display: block;
+  width: 50%;
+  height: 80%;
+  background-image: url("Images/bloody-grungy-killer-murder-journal-paper.jpg");
+  margin: 0;
+}
+
+.modalbox {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  background-color: black;
+  opacity: 1.5;
+  margin: 0;
+}
+.modalboxcolumns {
+  width: 25%;
+  height: 100%;
+  opacity: 1.5;
+  margin: 0;
+}
+.contain-image {
+  max-height: 25%;
+  max-width: 25%;
+}
+.contain-imagev2 {
+  max-height: 45%;
+  max-width: 45%;
+}
+.contain-imagev3 {
+  max-height: 75%;
+  max-width: 75%;
+}
+
+.close {
+  color: red;
+  position: fixed;
+  top: 0%;
+  right: 1%;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+h1 {
+  font-family: "Creepster", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 4em;
+  text-align: center;
+  color: black;
+}
+
+/* colors to see divs */
+.purple {
+  background-color: #523d64;
+}
+.green {
+  background-color: #85e21f;
+}
+.orange {
+  background-color: #da6339;
+}
+.gold {
+  background-color: #d3a047;
+}
+.yellow {
+  background-color: #ffeca7;
+}
+.black {
+  background-color: #000000;
+}
+.slate {
+  background-color: #1e171f;
+}
+.dark-grey {
+  background-color: #303131;
+}
+.light-grey {
+  background-color: #606060;
+}
+.silver {
+  background-color: silver;
+}
+.red {
+  background-color: red;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.translucent {
+  opacity: 0.1;
+}
+
+/* General modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* clear background */
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.note-modal {
+  background: transparent;
+}
+
+.note-pop {
+  width: 600px; /* adjust size */
+  display: block;
+}
+
+.note-modal .close {
+  top: 0%;
+  right: 1%;
+  font-size: 100px;
+  color: red;
+  z-index: 99;
+}
+
+#blackout {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: #000;
+  opacity: 0;
+  display: block; /* keep it present in the DOM */
+  pointer-events: none; /* disable blocking until we enable it */
+  z-index: 2147483647; /* max z-index to be safe */
+}
+
+.hint-text {
+  font-family: "Creepster", system-ui;
+  font-size: 2em; /* Bigger text */
+  color: red; /* Red color */
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hint-text.show {
+  opacity: 1;
+}
+
+.decimal-img {
+  transform: translateY(120px) scale(1.2); /* bigger + lower */
+  filter: drop-shadow(0 0 15px red) drop-shadow(0 0 25px red)
+    drop-shadow(0 0 35px red);
+}
+
+/* Ensure Modal 5's modal-body uses a new background */
+#myModal5 > .modal-body {
+  background-image: url("Images/closeup.png"); /* your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5); /* optional overlay */
+  background-blend-mode: overlay;
+}
