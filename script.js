@@ -151,7 +151,7 @@ function hideModal() {
 }
 
 function nextEscapeRoomPage() {
-  window.location.href = "https://vpn63l.csb.app/";
+  window.location.href = "https://giannaortiz.github.io/ESCAPETHEGRAVEFINAL/";
 }
 
 function unlockLock() {
@@ -236,3 +236,4 @@ window.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", startMusic);
   document.addEventListener("keydown", startMusic);
 });
+
